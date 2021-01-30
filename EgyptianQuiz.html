@@ -1,0 +1,43 @@
+<!-- Author:        Alexandra Wheeler  		 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ancient Egyptian Quiz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zeyada">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="wrapper">
+<h1>Ancient Egyptian History Quiz</h1>
+<p>How much do you know about ancient Egyptians? Test your knowledge by taking the quiz below.</p>
+    <div id="container">
+        <div id="start"><p>Click here to take the quiz!</p>
+		</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+				<div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+	<div class="center">
+	<button onclick="restartQuiz()">Restart Quiz </button>
+	</div>
+<script src="EgyptianQuiz.js"></script>
+<footer>
+<p>&copy; <span id="year"></span>. Alexandra Wheeler.</p>
+</footer>
+<script>
+    var currentYear = new Date().getFullYear(); 
+	var dateContainer = document.getElementById("year");
+	dateContainer.innerHTML = currentYear;
+</script>
+</div>
+</body>
+</html>
